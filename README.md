@@ -5,7 +5,6 @@ This plugin automatically adds merge request options when pushing to Git reposit
 ## Features
 
 - **Automatic Merge Request Creation**: Every push automatically creates a merge request
-- **Smart Assignment**: Automatically assigns merge requests to user ID 51
 - **Dynamic Titles**: Uses the current changelist/task name as the merge request title
 - **Hotfix Support**: Automatically sets target branch to `master` for branches containing "hotfix/"
 
