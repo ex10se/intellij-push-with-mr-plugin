@@ -1,0 +1,19 @@
+<idea-plugin>
+  <idea-version since-build="243.21565" />
+  <version>1.0</version>
+  <id>com.ex10se.push-create-mr</id>
+  <name>Git Push Create MR</name>
+  <vendor>ex10se</vendor>
+  <description><![CDATA[Adds "Commit-Push-MR" button to commit panel.
+    Automatically creates merge request in GitLab when pushing commits.]]></description>
+  <depends>com.intellij.modules.platform</depends>
+  <depends>Git4Idea</depends>
+  <actions>
+    <action id="git.custompush.toolwindow.button" class="org.jetbrains.plugins.git.custompush.actions.CustomCommitAndPushAction" text="Commit-Push-MR" description="Commit and Push with Merge Request creation">
+      <add-to-group group-id="Vcs.Commit.PrimaryCommitActions" anchor="last" />
+    </action>
+  </actions>
+  <extensions defaultExtensionNs="com.intellij">
+    <checkinHandlerFactory implementation="org.jetbrains.plugins.git.custompush.executors.CustomCheckinHandlerFactory" />
+  </extensions>
+</idea-plugin>
