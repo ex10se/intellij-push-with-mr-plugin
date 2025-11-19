@@ -16,3 +16,11 @@ When you use the "Commit-Push-MR" button in the Commit window, the plugin automa
 - `-o merge_request.create` - creates a merge request
 - `-o merge_request.title="<changelist_name>"` - uses the changelist name as the title
 - `-o merge_request.target=master` - sets the target to master (only for branches whose titles contains the string "hotfix/"); otherwise, the option is not set
+
+## How to build
+
+```shell
+export JAVA_HOME=$HOME/.local/share/JetBrains/Toolbox/apps/pycharm/jbr
+./gradlew buildPlugin --no-daemon
+```
+You will have a .zip file in `build/distributions/` that can be installed as a plugin in the IDE.
