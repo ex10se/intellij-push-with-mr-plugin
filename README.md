@@ -15,4 +15,4 @@ When you use the "Commit-Push-MR" button in the Commit window, the plugin automa
 
 - `-o merge_request.create` - creates a merge request
 - `-o merge_request.title="<changelist_name>"` - uses the changelist name as the title
-- `-o merge_request.target=master` - sets the target to master (only for hotfix branches)
+- `-o merge_request.target=master` - sets the target to master (only for branches whose titles contains the string "hotfix/"); otherwise, the option is not set
